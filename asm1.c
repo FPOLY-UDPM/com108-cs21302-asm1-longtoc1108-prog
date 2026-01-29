@@ -138,7 +138,7 @@ int main() {
         case 5: {
             // Gọi hàm đổi tiền
             printf("DA CHON CHUC NANG 5: DOI TIEN\n");
-            int tien, menhGia[] = {500,200,100,50,20,10,5,2,1};
+            int tien, menhGia[] = {200,100,50,20,10,5,2,1};
             printf("Nhap so tien can doi: ");
             scanf("%d", &tien);
 
