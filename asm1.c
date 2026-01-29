@@ -291,7 +291,7 @@ int main() {
             // Gọi hàm tính toán phân số
             printf("DA CHON CHUC NANG 10: TINH TOAN PHAN SO\n");
             int a, b, c, d;
-            printf("Nhap phan so a/b va c/d: ");
+            printf("Nhập phân số a/b và c/d: ");
             scanf("%d%d%d%d", &a, &b, &c, &d);
 
             printf("Tổng = %d/%d\n", a*d + c*b, b*d);
