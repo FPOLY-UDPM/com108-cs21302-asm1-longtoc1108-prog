@@ -21,28 +21,30 @@
 #include <math.h>
 
 int main() {
-    int chon;
+    int chonChucNang;
 
     do {
-        printf("\n========== MENU ==========\n");
-        printf("1. Kiem tra so\n");
-        printf("2. Tim UCLN va BCNN\n");
-        printf("3. Tinh tien Karaoke\n");
+        printf("Chon chuc nang:\n");
+        printf("1. Kiem tra so nguyen\n");
+        printf("2. Tim Uoc so chung va boi so chung cua 2 so\n");
+        printf("3. Tinh tien cho quan Karaoke\n");
         printf("4. Tinh tien dien\n");
-        printf("5. Doi tien\n");
-        printf("6. Tinh lai vay ngan hang\n");
+        printf("5. Chuc nang doi tien\n");
+        printf("6. Tinh lai suat vay ngan hang vay tra gop\n");
         printf("7. Vay tien mua xe\n");
-        printf("8. Sap xep sinh vien\n");
+        printf("8. Sap xep thong tin sinh vien\n");
         printf("9. Game FPOLY-LOTT\n");
         printf("10. Tinh toan phan so\n");
         printf("0. Thoat\n");
-        printf("Nhap lua chon: ");
-        scanf("%d", &chon);
+        printf("Nhap lua chon cua ban: ");
+        scanf("%d", &chonChucNang);
 
-        switch (chon) {
+        switch (chonChucNang) {
 
         /* ===== CASE 1 ===== */
         case 1: {
+            // Gọi hàm kiểm tra số nguyên
+            printf("DA CHON CHUC NANG 1: KIEM TRA SO NGUYEN\n");
             int x, i, nguyenTo = 1;
             printf("Nhap so nguyen x: ");
             scanf("%d", &x);
@@ -70,6 +72,8 @@ int main() {
 
         /* ===== CASE 2 ===== */
         case 2: {
+            // Gọi hàm tìm Ước số chung và bội số chung
+            printf("DA CHON CHUC NANG 2: TIM UOC SO CHUNG VA BOI SO CHUNG CUA 2 SO\n");
             int a, b, i, ucln = 1;
             printf("Nhap 2 so a b: ");
             scanf("%d%d", &a, &b);
@@ -86,6 +90,8 @@ int main() {
 
         /* ===== CASE 3 ===== */
         case 3: {
+            // Gọi hàm tính tiền cho quán Karaoke
+            printf("DA CHON CHUC NANG 3: TINH TIEN CHO QUAN KARAOKE\n");
             int gioVao, gioRa;
             float tien = 150000;
             printf("Nhap gio vao va gio ra: ");
@@ -104,6 +110,8 @@ int main() {
 
         /* ===== CASE 4 ===== */
         case 4: {
+             // Gọi hàm tính tiền điện
+            printf("DA CHON CHUC NANG 4: TINH TIEN DIEN\n");
             int kwh;
             float tien;
             printf("Nhap so kWh: ");
@@ -128,6 +136,8 @@ int main() {
 
         /* ===== CASE 5 ===== */
         case 5: {
+            // Gọi hàm đổi tiền
+            printf("DA CHON CHUC NANG 5: DOI TIEN\n");
             int tien, menhGia[] = {500,200,100,50,20,10,5,2,1};
             printf("Nhap so tien can doi: ");
             scanf("%d", &tien);
@@ -143,6 +153,8 @@ int main() {
 
         /* ===== CASE 6 ===== */
         case 6: {
+            // Gọi hàm tính lãi suất vay ngân hàng
+            printf("DA CHON CHUC NANG 6: TINH LAI SUAT VAY NGAN HANG VAY TRA GOP\n");
             float vay;
             printf("Nhap so tien vay: ");
             scanf("%f", &vay);
@@ -161,6 +173,8 @@ int main() {
 
         /* ===== CASE 7 ===== */
         case 7: {
+            // Gọi hàm vay tiền mua xe
+            printf("DA CHON CHUC NANG 7: VAY TIEN MUA XE\n");
             float phanTram;
             printf("Nhap %% vay: ");
             scanf("%f", &phanTram);
@@ -177,6 +191,8 @@ int main() {
 
         /* ===== CASE 8 ===== */
         case 8: {
+            // Gọi hàm sắp xếp thông tin sinh viên
+            printf("DA CHON CHUC NANG 8: SAP XEP THONG TIN SINH VIEN\n");
             int n;
             float diem[100];
             printf("Nhap so sinh vien: ");
@@ -208,6 +224,8 @@ int main() {
 
         /* ===== CASE 9 ===== */
         case 9: {
+            // Gọi hàm game FPOLY-LOTT
+            printf("DA CHON CHUC NANG 9: GAME FPOLY-LOTT\n");
             int a, b, x1, x2, trung = 0;
             printf("Nhap 2 so (1-15): ");
             scanf("%d%d", &a, &b);
@@ -225,6 +243,8 @@ int main() {
 
         /* ===== CASE 10 ===== */
         case 10: {
+            // Gọi hàm tính toán phân số
+            printf("DA CHON CHUC NANG 10: TINH TOAN PHAN SO\n");
             int a, b, c, d;
             printf("Nhap phan so a/b va c/d: ");
             scanf("%d%d%d%d", &a, &b, &c, &d);
@@ -241,10 +261,10 @@ int main() {
             break;
 
         default:
-            printf("Lua chon sai!\n");
+            printf("Lua chon khong hop le. Vui long chon lai.\n");
         }
 
-    } while (chon != 0);
+    } while (chonChucNang != 0);
 
     return 0;
 }
